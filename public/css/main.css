@@ -1,0 +1,69 @@
+body {
+  margin-top: 50px;
+  background-color: #fcfcfc;
+}
+
+.flag {
+  height: 35px;
+}
+
+.comment-points {
+  float: right;
+}
+
+.imgpost {
+  max-width: 65%;
+  border: 1px solid #999;
+}
+
+.centered {
+  text-align: center;
+}
+
+.thumb {
+  border: 1px solid #999;
+}
+
+.paginatelinks {
+  text-align: center;
+}
+
+.panel-body {
+  word-wrap: break-word;
+}
+
+.well {
+  word-wrap: break-word;
+}
+
+.controls #description {
+  height: 10em;
+  width: 100%;
+}
+
+.controls #comment {
+  height: 4em;
+  width: 100%;
+}
+
+.controls #title {
+  width: 100%;
+}
+
+.fileinput {
+  text-align: center;
+}
+
+.fileinput-preview {
+  max-width: 300px;
+}
+
+#charnum {
+  text-align: right;
+}
+
+@media(max-width:767px) {
+  .imgpost {
+    max-width: 100%;
+  }
+}
