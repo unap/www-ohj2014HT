@@ -9,7 +9,7 @@ class HomeController extends BaseController {
    */
 	public function showHome()
 	{
-    $images = Post::paginate(16);
+    $images = Post::all();
 		return View::make('home')->with('images', $images);
 	}
 

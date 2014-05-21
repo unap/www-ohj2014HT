@@ -38,8 +38,8 @@ class CreateTables extends Migration {
       $table->integer('points')->default(0);
       $table->timestamps();
       //Keys
-      $table->foreign('image_id')->references('id')->on('images');
-      $table->foreign('user_id')->references('id')->on('users');
+      $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
       $table->primary(array('created_at', 'user_id'));
     });
 
@@ -58,8 +58,8 @@ class CreateTables extends Migration {
    */
   public function down()
   {
-    Schema::drop('images');
     Schema::drop('comments');
+    Schema::drop('images');
   }
 
 }

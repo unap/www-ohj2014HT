@@ -19,15 +19,26 @@
   </div>
 
   <div class="col-md-9 col-md-pull-3">
-    @include('partials.imagelist')
+    <div class="panel panel-default">
+      <div id="tabs" class="panel-body">
+
+        <ul>
+          <li><a href="#date">{{ Lang::get('messages.dateorder') }}</a></li>
+          <li><a href="#points">{{ Lang::get('messages.pointsorder') }}</a></li>
+        </ul>
+
+        <div id="date">
+          <?php $images = $images->sortBy('created_at') ?>
+          @include('partials.imagelist')
+        </div>
+        <div id="points">
+          <?php $images = $images->sortBy(function($image){return -($image->points);}) ?>
+          @include('partials.imagelist')
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3 paginatelinks">
-    {{ $images->links() }}
-  </div>
-</div>
-
 
 @stop

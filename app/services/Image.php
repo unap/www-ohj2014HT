@@ -30,7 +30,7 @@ class Image {
     {
       $this->library = Config::get('image.library', 'gd');
 
-          // Now create the instance
+      // Now create the instance
       if     ($this->library == 'imagick') $this->imagine = new \Imagine\Imagick\Imagine();
       elseif ($this->library == 'gmagick') $this->imagine = new \Imagine\Gmagick\Imagine();
       elseif ($this->library == 'gd')      $this->imagine = new \Imagine\Gd\Imagine();

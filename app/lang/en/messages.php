@@ -12,7 +12,9 @@ return array(
     /* Home page */
     'welcome' => 'Welcome',
     'info' => 'Info',
-    'websiteinfo' => '<p>This is a website made by Panu Asikanius for the www-programming course at the University of Tampere.</p><p>The website is built using the Laravel PHP framework. The front-end uses Twitter Bootstrap, Jasny Bootstrap, jQuery and FancyBox.</p>',
+    'websiteinfo' => '<p>This is a website made by Panu Asikanius for the www-programming course at the University of Tampere.</p><p>The website is built using the Laravel PHP framework. The front-end uses Twitter Bootstrap, Jasny Bootstrap, jQuery, jQueryUi and FancyBox.</p>',
+    'dateorder' => 'Order by upload date',
+    'pointsorder' => 'Order by points',
 
     /* Register */
     'password' => 'Password',
@@ -25,6 +27,7 @@ return array(
     'groups' => 'Groups',
     'options' => 'Options',
     'edit' => 'Edit',
+    'deleteuser' => 'Delete user',
     'delete' => 'Delete',
 
     /* Upload page*/
@@ -41,6 +44,7 @@ return array(
     'uploader' => 'Uploader',
     'comment' => 'Comment',
     'sendcomment' => 'Send comment',
+    'deleteimage' => 'Delete image',
 
     /* Profile page */
     'userprofileof' => 'User profile of :name',

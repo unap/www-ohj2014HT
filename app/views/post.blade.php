@@ -2,11 +2,22 @@
 
 @section('main')
 
+<?php 
+
+$user = Sentry::findUserById($image->user_id);
+$cur_user = Sentry::getUser();
+
+?>
+
 <div class="row">
   <div class="col-md-12">
     <h1>{{{ $image->title }}}</h1>
-    <?php $user = Sentry::findUserById($image->user_id) ?>
     <h4>{{ Lang::get('messages.uploader')}}: <a href="{{URL::route('userprofile', $user->id)}}">{{ $user->first_name}}</a></h4>
+
+    @if($cur_user && ($user == $cur_user | $cur_user->hasAccess('admin')))
+    <a href="{{ URL::route('deleteimage', $image->id) }}" class="btn btn-danger">{{ Lang::get('messages.deleteimage') }}</a>
+    @endif
+
   </div>
 </div>
 

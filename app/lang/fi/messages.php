@@ -13,7 +13,9 @@ return array(
     'welcome' => 'Tervetuloa',
     'info' => 'Tietoa',
     'websiteinfo' => '<p>Tämän verkkosivun on tehnyt Panu Asikanius Tampereen yliopiston www-ohjelmoinnin kurssia varten</p>
-                      <p>Verkkosivu on toteutettu käyttäen Laravel PHP-sovelluskehystä. Front-endissä käytetään kirjastoja Twitter Bootstrap, Jasny Bootstrap, jQuery ja FancyBox.</p>',
+                      <p>Verkkosivu on toteutettu käyttäen Laravel PHP-sovelluskehystä. Front-endissä käytetään Twitter Bootstrap, Jasny Bootstrap, jQuery, jQueryUi ja FancyBox.</p>',
+    'dateorder' => 'Järjestä aikaleiman mukaan',
+    'pointsorder' => 'Järjestä pisteiden mukaan',               
 
     /* Register */
     'password' => 'Salasana',
@@ -26,6 +28,7 @@ return array(
     'groups' => 'Ryhmät',
     'options' => 'Asetukset',
     'edit' => 'Muokkaa',
+    'deleteuser' => 'Poista käyttäjä',
     'delete' => 'Poista',
 
     /* Upload page*/
@@ -42,6 +45,7 @@ return array(
     'uploader' => 'Lähettäjä',
     'comment' => 'Kommentoi',
     'sendcomment' => 'Lähetä kommentti',
+    'deleteimage' => 'Poista kuva',
 
     /* Profile page */
     'userprofileof' => 'Käyttäjän :name profiili',

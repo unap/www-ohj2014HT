@@ -18,6 +18,11 @@ Route::get('/', array(
   'uses' => 'HomeController@showHome'
 ));
 
+Route::get('feed', array(
+  'as' => 'feed',
+  'uses' => 'FeedController@makeFeed'
+));
+
 Route::get('login', array(
   'before' => 'guest', // logged in users can't login
   'as' => 'login', 
@@ -59,14 +64,21 @@ Route::get('register', array(
 ));
 
 Route::post('register', array(
-  'before' => 'csrf',
+  'before' => 'guest|csrf',
   'as' => 'register',
   'uses' => 'UserController@saveUser'
 ));
 
 Route::get('deleteuser/{id}', array(
+  'before' => 'auth',
   'as' => 'deleteuser',
   'uses' => 'UserController@deleteUser'
+));
+
+Route::get('deleteimage/{id}', array(
+  'before' => 'auth',
+  'as' => 'deleteimage',
+  'uses' => 'PostController@deleteImage'
 ));
 
 Route::get('upload', array(
@@ -100,11 +112,6 @@ Route::post('vote/{id}', array(
   'uses' => 'PostController@vote'
 ));
 
-/* DEBUG stuff */
-Route::get('test', array(
-  'as' => 'test',
-  'uses' => 'TestController@user'
-));
 
 Route::get('info', array(
   'as' => 'info',

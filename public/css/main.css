@@ -1,6 +1,12 @@
 body {
   margin-top: 50px;
+  margin-bottom: 80px;
   background-color: #fcfcfc;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 .flag {
@@ -12,8 +18,17 @@ body {
 }
 
 .imgpost {
-  max-width: 65%;
+  max-width: 400px;
+  max-height: 600px;
   border: 1px solid #999;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
 }
 
 .centered {
@@ -62,8 +77,48 @@ body {
   text-align: right;
 }
 
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.ui-tabs { 
+    background: transparent; 
+    border: none; 
+} 
+.ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+.ui-tabs-nav .ui-state-default { 
+    background: transparent; 
+    border: none; 
+} 
+.ui-tabs-nav .ui-state-active { 
+    background: #333; 
+    border: none; 
+} 
+.ui-tabs-nav .ui-state-default a { 
+    color: #333; 
+} 
+.ui-tabs-nav .ui-state-active a { 
+    color: #fff; 
+}
+
 @media(max-width:767px) {
   .imgpost {
     max-width: 100%;
   }
 }
+

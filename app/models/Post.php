@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Calling the imageposts just posts to avoid confusion with Image
+ * Calling the imageposts just posts to "avoid confusion" with Image
  */
 
 class Post extends \Eloquent {
@@ -44,9 +44,9 @@ class Post extends \Eloquent {
 
     /* rules for validator */
     $rules = array(
-      'title' => 'required',
+      'title' => 'required|max:140',
       'image' => 'required|mimes:jpeg,png,gif',
-      'description' => 'max:140',
+      'description' => 'max:400',
       );
 
     $validator = Validator::make(

@@ -124,6 +124,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Cartalyst\Sentry\SentryServiceProvider',
+    'Roumen\Feed\FeedServiceProvider',
 
 	),
 
@@ -193,6 +194,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+    'Feed' => 'Roumen\Feed\Facades\Feed',
     'Image' => 'App\Facades\ImageFacade',
 
 	),

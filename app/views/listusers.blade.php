@@ -31,7 +31,7 @@
           @endforeach
         </td>
          <td class="rowlink-skip">
-          <button class="btn btn-danger" onclick="myConfirm({{$user->id}})">Delete</a>
+          <button class="btn btn-danger" onclick="confirmDelete({{$user->id}})">{{ Lang::get('messages.deleteuser')}}</a>
         </td>
         @endif
         
@@ -45,13 +45,7 @@
 </ul>
 
 @if($admin && $admin->hasAccess('admin'))
-<script type="text/javascript">
-  function myConfirm (id) {
-    if (confirm("Really delete user?")) {
-      window.location.href = "http://"+window.location.hostname+"/deleteuser/"+id;
-    }
-  }
-</script>
+  @include('partials.confirmdelete')
 @endif
 
 

@@ -1,6 +1,7 @@
 <div id="wysihtml5-toolbar" style="display: none; margin-bottom: 5px;">
   <a class="btn btn-default" data-wysihtml5-command="bold"><span class="glyphicon glyphicon-bold "></span></a>
   <a class="btn btn-default" data-wysihtml5-command="italic"><span class="glyphicon glyphicon-italic "></span></a>
+  <a class="btn btn-default" data-wysihtml5-command="underline"><span class="glyphicon glyphicon-text-width "></span></a>
   
   <!-- Some wysihtml5 commands require extra parameters -->
   <a class="btn btn-default" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>

@@ -53,8 +53,8 @@ class UserController extends BaseController {
   {
     $admin = Sentry::getUser();
 
-    /* Check that user is logged in and is admin */
-    if($admin && $admin->hasAccess('admin'))
+    /* Check that user is logged in and is admin or user themself */
+    if($admin && ($admin->hasAccess('admin') || $admin->id == $id))
     {
       try {
         $user_to_delete = Sentry::findUserById($id);
@@ -75,6 +75,11 @@ class UserController extends BaseController {
       {
         return App::abort(404);
       }
+    }
+    else
+    {
+      $message = 'Authorization required to delete user!';
+      return Redirect::route('listusers')->withErrors($message);
     }
 
   }
@@ -156,9 +161,10 @@ class UserController extends BaseController {
           'email' => $userdata['email'],
           'first_name' => $userdata['first_name'],
           'password' => $userdata['password'],
-          'description' => $userdata['description'],
+          'description' => strip_tags($userdata['description']),
           'activated' => true, 
           );
+
 
         $user = Sentry::createUser($userdata);
 

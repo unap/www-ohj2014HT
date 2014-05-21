@@ -34,7 +34,7 @@
     <div class="control-group">
       {{ Form::label('description', Lang::get('messages.description')) }}
       <div class="controls">
-        {{ Form::textarea('description', '',array('onkeyup' => 'countChar(this, 140)')) }}
+        {{ Form::textarea('description', '',array('onkeyup' => 'countChar(this, 400)')) }}
         <div id="charnum"></div>
       </div>
     </div>

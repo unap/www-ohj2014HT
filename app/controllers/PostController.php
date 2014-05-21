@@ -91,4 +91,32 @@ class PostController extends BaseController {
 
   }
 
+  /**
+   * Delete image with $id
+   * @return Redirect
+   */
+  public function deleteImage($id)
+  {
+    $image_to_delete = Post::find($id);
+
+    $user = Sentry::getUser();
+    $uploader = Sentry::findUserById($image_to_delete->user_id);
+
+    /* Check that user is logged in and is uploader or admin */
+    if($user && ($user->hasAccess('admin')) || $user == $uploader)
+    {
+
+      $message = 'Image '.$image_to_delete->title.' was deleted!';
+      $image_to_delete->delete();
+      return Redirect::route('/')->with('message', $message);
+    }
+    else
+    {
+      $message = 'Authorization required to delete image!';
+      return Redirect::back()->withErrors($message);
+    }
+
+  }
+
+
 }

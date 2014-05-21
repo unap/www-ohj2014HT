@@ -25,6 +25,7 @@
         <!-- User can edit own information. Admin can edit everyone's information -->
           <hr>
           <a data-target="#edit" role="button" class="btn btn-default" data-toggle="modal">{{ Lang::get('messages.edit')}}</a>
+          <button class="btn btn-danger" onclick="confirmDelete({{$user->id}})">{{ Lang::get('messages.deleteuser')}}</a>
         @endif
       </div>
     </div>
@@ -84,6 +85,8 @@
     parserRules:  wysihtml5ParserRules // defined in parser rules set 
   }); 
 </script>
+
+@include('partials.confirmdelete')
 
 
 @stop
